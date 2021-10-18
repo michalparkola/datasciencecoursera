@@ -1,0 +1,24 @@
+---
+title: "My Top 3 Restaurants"
+author: "Michał Parkoła"
+date: "10/18/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+library(leaflet)
+m <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=52.217050514520444, lng=20.98905244395619,
+             popup="Ocho") %>%
+  addMarkers(lat=52.223129464170064, lng=21.01238302720071,
+             popup="Arrigator") %>%
+  addMarkers(lat=52.24601571923493, lng=21.005042586636606,
+             popup="Vege Miasto")
+m
+  
+```
